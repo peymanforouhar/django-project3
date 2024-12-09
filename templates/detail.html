@@ -1,0 +1,9 @@
+{% extends 'parent.html' %}
+{% block code1 %}
+        <a href="{% url 'delete' human.id %}" class="btn btn-danger">Delete</a>
+        <a href="{% url 'edit' human.id %}" class="btn btn-info">Edit</a>
+        <h3>{{human.name}} {{human.family}}</h3>
+        <p>{{human.age}}</p>
+        <small>{{human.register_date}}</small>
+        <p>{{human.address}}</p>
+{% endblock %}

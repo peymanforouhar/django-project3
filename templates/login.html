@@ -1,0 +1,10 @@
+{% extends 'parent.html' %}
+{% block code1 %}
+    <a href="{% url 'register' %}" class="btn btn-info">Create New Human</a>
+    <a href="{% url 'user_register' %}" class="btn btn-info">Create New User</a>
+    <div class="card">
+        {% for i in all %}
+            <a href="{% url 'details' i.id %}">{{i.name}} {{i.family}}</a><br/>
+        {% endfor %}
+    </div>
+{% endblock %}

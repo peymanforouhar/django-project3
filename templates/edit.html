@@ -1,0 +1,9 @@
+{% extends 'parent.html' %}
+{% block code1 %}
+<h3>Edit a Human</h3>
+<form method="post" action="" novalidate>
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Edit">
+</form>
+{% endblock %}
